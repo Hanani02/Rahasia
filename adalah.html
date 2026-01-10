@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎉</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 flex items-center justify-center">
+
+  <!-- Halaman 1 -->
+  <div id="page1" class="text-center text-gray-800 p-6 transition-all duration-700 opacity-100">
+    <h1 class="text-5xl font-extrabold mb-4 animate-bounce text-gray-900">🎂 Happy Birthday 🎂</h1>
+    <p class="text-lg mb-8">Untuk Yvaine Hanif Buqari ✨</p>
+    <button onclick="goNext()" class="px-6 py-3 bg-gray-900 text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 hover:scale-105 transition">
+      PENCET WOIII
+    </button>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div id="page2" class="hidden max-w-3xl bg-white rounded-3xl shadow-2xl p-8 border border-gray-300 transition-all duration-700 opacity-0 translate-y-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Dibaca yah!!</h2>
+    <p class="text-gray-700 text-center mb-6">
+      Selamat ulang tahun, Yvaine Hanif Buqari, ga kerasa udah yang ke 16 wkwk, ga kerasa juga udah sejauh ini kamu melangkah.
+     Aku disini gabisa kasih apa apa selain buat desain web ini dan doa, aku ingin kamu di tahun ini dan seterusnya selalu sukses,
+     sehat selalu, bisa bahagiain orang tua, dan lupain aku mwehehe (jgn pls), oh iya sebelum pesan ini berakhir aku mau minta maaf dulu
+     kalo aku udah ngecewain kamu banyakkk banget, semoga kamu bisa terima maaf dan hadiah yang tidak ada harganya ini wkwk.
+     Btw aku ga bisa hapus foto ini hehe.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      <img src="foto 1.jpeg" alt="Foto 1" class="rounded-xl shadow-md object-cover" />
+      <img src="foto 2.jpeg" alt="Foto 2" class="rounded-xl shadow-md object-cover" />
+      <img src="foto 3.jpeg" alt="Foto 3" class="rounded-xl shadow-md object-cover" />
+    </div>
+
+    <p class="text-center text-sm text-gray-500 mb-6">— Dari aku, yang selalu mendoakan kamu ✨</p>
+
+    <div class="text-center">
+      <button onclick="goThird()" class="px-6 py-3 bg-gray-900 text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 hover:scale-105 transition">
+        lanjut boss
+      </button>
+    </div>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div id="page3" class="hidden max-w-3xl bg-white rounded-3xl shadow-2xl p-10 border border-gray-300 text-center transition-all duration-700 opacity-0 translate-y-4">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">11 Januari 2026</h2>
+    <p class="text-xl text-gray-700 mb-6">Hari yang spesial </p>
+
+    <div class="flex justify-center mb-6">
+      <div class="px-8 py-6 bg-gray-100 rounded-2xl shadow-inner">
+        <p class="text-lg text-gray-800">
+          Bukan cuma karena tanggalnya,
+          tapi karena di hari ini
+          <span class="font-semibold text-gray-900">kamu lahir ke dunia.</span> aww
+        </p>
+      </div>
+    </div>
+
+    <p class="text-gray-600 text-sm">
+      Semoga setiap 11 Januari selalu jadi pengingat
+      bahwa kamu itu berharga, hari ini dan seterusnya.
+    </p>
+
+    <div class="text-center mt-8">
+      <button onclick="goFourth()" class="px-6 py-3 bg-gray-900 text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 hover:scale-105 transition">
+        Penutup 
+      </button>
+    </div>
+  </div>
+
+  <!-- Halaman 4 (Penutup & Komentar) -->
+  <div id="page4" class="hidden max-w-3xl bg-white rounded-3xl shadow-2xl p-10 border border-gray-300 text-center transition-all duration-700 opacity-0 translate-y-6">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Komentar</h2>
+<form onsubmit="handleSubmit()" action="mailto:akbarhanani02@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
+<textarea name="pesan" rows="4" placeholder="Tulis pesan kamu di sini..." required
+class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+<button type="submit"
+class="px-6 py-3 bg-gray-900 text-white font-semibold rounded-full shadow-lg hover:bg-gray-800 hover:scale-105 transition">
+Kirim pesan 
+</button>
+</form>
+<br/>
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Akhir Kata</h2>
+    <p class="text-gray-700 mb-6">
+      Sekali lagi, selamat ulang tahun wipol! Semoga hari-harimu selalu dipenuhi dengan kebahagiaan dan kesuksesan.
+      Jangan lupa untuk selalu tersenyum dan menikmati setiap momen dalam hidupmu.
+    </p>
+
+
+<p class="text-sm text-gray-500 mt-6">Terima kasih sudah sampai di akhir 🤍</p>
+</div>
+
+
+<script>
+function goNext() {
+const p1 = document.getElementById('page1');
+const p2 = document.getElementById('page2');
+p1.classList.add('opacity-0');
+setTimeout(() => {
+p1.classList.add('hidden');
+p2.classList.remove('hidden');
+setTimeout(() => {
+p2.classList.remove('opacity-0', 'translate-y-4');
+}, 50);
+}, 500);
+}
+
+
+function goThird() {
+const p2 = document.getElementById('page2');
+const p3 = document.getElementById('page3');
+p2.classList.add('opacity-0');
+setTimeout(() => {
+p2.classList.add('hidden');
+p3.classList.remove('hidden');
+setTimeout(() => {
+p3.classList.remove('opacity-0', 'translate-y-4');
+}, 50);
+}, 500);
+}
+
+
+function goFourth() {
+const p3 = document.getElementById('page3');
+const p4 = document.getElementById('page4');
+
+function handleSubmit() {
+  const p4 = document.getElementById('page4');
+  const p1 = document.getElementById('page1');
+
+  // kasih waktu email client kebuka
+  setTimeout(() => {
+    // fade out page 4
+    p4.classList.add('opacity-0');
+
+    setTimeout(() => {
+      p4.classList.add('hidden');
+
+      // reset page 1
+      p1.classList.remove('hidden');
+      p1.classList.remove('opacity-0');
+    }, 500);
+  }, 300);
+
+  return true; // PENTING: supaya mailto tetap jalan
+}
+
+// fade out page 3
+p3.classList.add('opacity-0');
+
+setTimeout(() => {
+p3.classList.add('hidden');
+
+// reset page 4 state
+p4.classList.remove('hidden');
+p4.classList.add('opacity-0', 'translate-y-6');
+
+// trigger animation
+requestAnimationFrame(() => {
+p4.classList.remove('opacity-0', 'translate-y-6');
+});
+}, 500);
+}
+</script>
+
+</body>
+</html>
